@@ -6,8 +6,7 @@ Generate mvvm code for windows form app,(gen model,gen dal,gen service,gen mvvm,
 
 please install package on consume windows form app
 
-<?xml version="1.0" encoding="utf-8"?>
-<packages>
+
   <package id="AutoMapper" version="10.0.0" targetFramework="net461" />
   <package id="Dapper" version="2.0.123" targetFramework="net461" />
   <package id="Dapper.Contrib" version="2.0.78" targetFramework="net461" />
@@ -28,4 +27,4 @@ please install package on consume windows form app
   <package id="System.Runtime.InteropServices.WindowsRuntime" version="4.3.0" targetFramework="net461" />
   <package id="System.Runtime.Serialization.Primitives" version="4.3.0" targetFramework="net461" />
   <package id="System.Threading.Tasks.Extensions" version="4.5.4" targetFramework="net461" />
-</packages>
+
