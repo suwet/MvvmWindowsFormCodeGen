@@ -1,0 +1,24 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Threading;
+using System.Threading.Tasks;
+using ReactiveUI;
+using System.ComponentModel;
+
+namespace [{NAMESPACE}]
+{
+	public  class [{CLASS_NAME}] : ViewModelBase
+	{
+		public [{CLASS_NAME}]()
+		{
+		}
+		public [{CLASS_NAME}](IEnumerable<[{ViewModel}]> list )
+		{
+			[{ViewModel}]s = new BindingList<[{ViewModel}]>(list.ToList());
+		}
+		public BindingList<[{ViewModel}]> [{ViewModel}]s {get;set;}
+	}
+}

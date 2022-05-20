@@ -1,0 +1,78 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Threading;
+using System.Threading.Tasks;
+using Dapper;
+using System.Data.SqlClient;
+
+namespace [{NAMESPACE}]
+{
+	public  class [{CLASS_NAME}] : BaseDal
+	{
+		public List<[{MODEL_NAME}]> GetAll()    
+        {    
+            List<[{MODEL_NAME}]> results = new List<[{MODEL_NAME}]>();    
+            using (var connection = new SqlConnection(ConnectionString))    
+            {    
+                connection.Open();    
+                string query = @"Select [{COLUMN_LIST}] From [{TABLE_NAME}]";
+                results = connection.Query<[{MODEL_NAME}]>(query).ToList();    
+                connection.Close();    
+            }    
+            return results;    
+        }    
+
+        public int Insert([{MODEL_NAME}] data)    
+        {    
+            using (var connection = new SqlConnection(ConnectionString))    
+            {    
+                connection.Open(); 
+                string sql = @"Insert into [{TABLE_NAME}] ([{COLUMN_LIST}])
+                                                          values([{COLUMN_LIST_PARAM}])
+                            ";
+                var affectedRows = connection.Execute(sql,[{OBJECT_PARAM}]);    
+                connection.Close();    
+                return affectedRows;    
+            }    
+        }   
+        
+        public int Update([{MODEL_NAME}] data)    
+        {    
+            using (var connection = new SqlConnection(ConnectionString))    
+            {    
+                connection.Open();    
+                string sql = @"Update [{TABLE_NAME}] set [{UPDATE_LIST_PARAM}] where Id=@Id";
+                var affectedRows = connection.Execute(sql,[{OBJECT_PARAM}]);    
+                connection.Close();    
+                return affectedRows;    
+            }    
+        }  
+        
+        public int Delete(long Id)    
+        {    
+            using (SqlConnection connection = new SqlConnection(ConnectionString))    
+            {    
+                connection.Open();    
+                string sql = @"Delete from [{TABLE_NAME}] Where Id = @Id";
+                var affectedRows = connection.Execute(sql, new {Id = Id });    
+                connection.Close();    
+                return affectedRows;    
+            }    
+        }    
+
+        public [{MODEL_NAME}] GetById(long Id)    
+        {    
+            using (SqlConnection connection = new SqlConnection(ConnectionString))    
+            {    
+                connection.Open();    
+                string sql = @"Select [{COLUMN_LIST}] from [{TABLE_NAME}] Where Id = @Id";
+                var result  = connection.QueryFirst<[{MODEL_NAME}]>(sql, new {Id = Id });    
+                connection.Close();    
+                return result;    
+            }    
+        }    
+	}
+}

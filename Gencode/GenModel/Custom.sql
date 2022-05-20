@@ -1,0 +1,1 @@
+﻿SELECT  *  From [RMX_Lite_3_4].[dbo].[M_User]
