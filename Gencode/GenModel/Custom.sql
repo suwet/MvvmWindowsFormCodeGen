@@ -1,1 +1,2 @@
-﻿SELECT  *  From [RMX_Lite_3_4].[dbo].[M_User]
+﻿select [CF_ID],[CF_Name],[CF_Value],[CF_Group],[CF_Description]
+from [dbo].[C_Configuration]

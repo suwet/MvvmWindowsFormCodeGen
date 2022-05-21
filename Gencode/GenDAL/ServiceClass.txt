@@ -71,11 +71,12 @@ namespace [{NAMESPACE}]
            }
         }    
 
-        public [{MODEL_NAME}] GetById(long Id)    
+        public [{VIEW_MODEL_NAME}] GetById(long Id)    
         {    
              try
            {
-                return _[{DAL_CLASS}].GetById(Id);
+                var result = _[{DAL_CLASS}].GetById(Id);
+                return TheMapper.Map<[{VIEW_MODEL_NAME}]>(result);
            }
            catch(Exception ex)
            {

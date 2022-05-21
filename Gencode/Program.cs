@@ -12,7 +12,7 @@ namespace Gencode
     {
         static void Main(string[] args)
         {
-            GenClass.GenEditForm("TestConsumeGenCode.Views", "EditMUserForm", "MUserViewModel", "MUserService");
+            //GenClass.GenEditForm("TestConsumeGenCode.Views", "EditMUserForm", "MUserViewModel", "MUserService");
             if (args.Length >= 3)
             {
                 switch(args[0])

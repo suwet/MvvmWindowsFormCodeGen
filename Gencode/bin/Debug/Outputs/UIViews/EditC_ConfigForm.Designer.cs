@@ -91,38 +91,38 @@ namespace Rmx.Views
 
             // 
                 
- this.txt_cf_name.Location = new System.Drawing.Point(210,200);
+ this.txt_cf_name.Location = new System.Drawing.Point(210,40);
  this.txt_cf_name.Name = "txt_cf_name";
  this.txt_cf_name.Size = new System.Drawing.Size(390,20);
 
-  this.lbl_cf_name.Location = new System.Drawing.Point(36,200);
+  this.lbl_cf_name.Location = new System.Drawing.Point(36,40);
  this.lbl_cf_name.Name = "lbl_cf_name";
  this.lbl_cf_name.Size = new System.Drawing.Size(150,14);
  this.lbl_cf_name.Text = "CF_Name";
     
- this.txt_cf_value.Location = new System.Drawing.Point(210,240);
+ this.txt_cf_value.Location = new System.Drawing.Point(210,80);
  this.txt_cf_value.Name = "txt_cf_value";
  this.txt_cf_value.Size = new System.Drawing.Size(390,20);
 
-  this.lbl_cf_value.Location = new System.Drawing.Point(36,240);
+  this.lbl_cf_value.Location = new System.Drawing.Point(36,80);
  this.lbl_cf_value.Name = "lbl_cf_value";
  this.lbl_cf_value.Size = new System.Drawing.Size(150,14);
  this.lbl_cf_value.Text = "CF_Value";
     
- this.txt_cf_group.Location = new System.Drawing.Point(210,280);
+ this.txt_cf_group.Location = new System.Drawing.Point(210,120);
  this.txt_cf_group.Name = "txt_cf_group";
  this.txt_cf_group.Size = new System.Drawing.Size(390,20);
 
-  this.lbl_cf_group.Location = new System.Drawing.Point(36,280);
+  this.lbl_cf_group.Location = new System.Drawing.Point(36,120);
  this.lbl_cf_group.Name = "lbl_cf_group";
  this.lbl_cf_group.Size = new System.Drawing.Size(150,14);
  this.lbl_cf_group.Text = "CF_Group";
     
- this.txt_cf_description.Location = new System.Drawing.Point(210,320);
+ this.txt_cf_description.Location = new System.Drawing.Point(210,160);
  this.txt_cf_description.Name = "txt_cf_description";
  this.txt_cf_description.Size = new System.Drawing.Size(390,20);
 
-  this.lbl_cf_description.Location = new System.Drawing.Point(36,320);
+  this.lbl_cf_description.Location = new System.Drawing.Point(36,160);
  this.lbl_cf_description.Name = "lbl_cf_description";
  this.lbl_cf_description.Size = new System.Drawing.Size(150,14);
  this.lbl_cf_description.Text = "CF_Description";
@@ -178,10 +178,10 @@ namespace Rmx.Views
         private System.Windows.Forms.Button btn_cancel;
 
             
- System.Windows.Forms.TextBox txt_cf_name;    
- System.Windows.Forms.TextBox txt_cf_value;    
- System.Windows.Forms.TextBox txt_cf_group;    
- System.Windows.Forms.TextBox txt_cf_description;
+ private System.Windows.Forms.TextBox txt_cf_name;    
+ private System.Windows.Forms.TextBox txt_cf_value;    
+ private System.Windows.Forms.TextBox txt_cf_group;    
+ private System.Windows.Forms.TextBox txt_cf_description;
 
             
  private System.Windows.Forms.Label lbl_cf_name;    
